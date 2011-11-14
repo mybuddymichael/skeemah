@@ -2,7 +2,7 @@ Skeemah::Application.routes.draw do
 
   root to: 'splash#index'
 
-  match 'auth/github/callback', to: 'sessions#create'
+  get 'auth/github/callback', to: 'sessions#create'
 
   get 'signout', to: 'sessions#destroy'
 
