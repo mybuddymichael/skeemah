@@ -1,0 +1,24 @@
+// Variables
+$blue_base: #002b36;
+$white_base: #fdf6e3;
+$white_base_dark: #dad5c3;
+$blue: #268bd2;
+$blue_dark: #0072b6;
+
+$font_base: 16px Helvetica, Arial, sans-serif;
+
+// Mixins
+@mixin border-radius($radius: 2px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin border-radius-uneven($tl, $tr, $br, $bl) {
+  -moz-border-radius-topleft: $tl;
+  -moz-border-radius-topright: $tr;
+  -moz-border-radius-bottomright: $br;
+  -moz-border-radius-bottomleft: $bl;
+  -webkit-border-radius: $tl $tr $br $bl;
+  border-radius: $tl $tr $br $bl;
+}
