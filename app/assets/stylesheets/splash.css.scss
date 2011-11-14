@@ -3,7 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #splash {
-  font-size: 80px;
-  font-weight: bold;
   margin-top: 92px;
+
+  h1 {
+    font-size: 80px;
+    font-weight: bold;
+  }
 }
