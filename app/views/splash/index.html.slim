@@ -1,0 +1,5 @@
+#splash
+  - if current_user
+    h1 Hi, #{current_user}!
+  - if session[:user_id] == nil
+    h1 = link_to 'Sign in with GitHub', sign_in_path
