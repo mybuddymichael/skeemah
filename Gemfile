@@ -37,3 +37,9 @@ end
 
 gem 'slim-rails'
 gem 'omniauth-github'
+
+group :development do
+  gem 'guard'
+  gem 'rb-fsevent'
+  gem 'guard-livereload'
+end
