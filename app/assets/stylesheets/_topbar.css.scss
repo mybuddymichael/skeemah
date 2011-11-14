@@ -1,0 +1,14 @@
+@import 'config';
+
+#topbar {
+  font-weight: bold;
+  color: $white_base;
+  background-color: $blue;
+  padding: 8px;
+
+  @include border-radius-uneven(0px, 0px, 2px, 2px);
+
+  #user_info {
+    float: right;
+  }
+}
