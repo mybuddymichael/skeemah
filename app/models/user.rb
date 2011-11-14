@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
       user.username = auth_hash['info']['nickname']
       user.gh_uid = auth_hash['uid']
       user.email = auth_hash['info']['email']
+      user.token = auth_hash['credentials']['token']
     end
   end
 
