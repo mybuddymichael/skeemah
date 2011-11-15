@@ -1,6 +1,6 @@
 Skeemah::Application.routes.draw do
 
-  root to: 'splash#index'
+  root to: 'dashboard#index'
 
   get 'auth/github/callback', to: 'sessions#create'
 
