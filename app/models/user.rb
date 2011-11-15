@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+  has_many :schemes
+
   def self.find_or_create_with_omniauth(auth_hash)
     if user = User.find_by_gh_uid(auth_hash['uid'])
       update_omniauth_info(user, auth_hash)

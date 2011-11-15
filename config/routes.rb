@@ -4,8 +4,6 @@ Skeemah::Application.routes.draw do
 
   get 'auth/github/callback', to: 'sessions#create'
 
-  get 'signout', to: 'sessions#destroy'
-
   get 'auth/github', as: :sign_in
 
   get 'signout', to: 'sessions#destroy', as: :sign_out
