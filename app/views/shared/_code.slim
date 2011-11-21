@@ -1,0 +1,23 @@
+| <span class='ln'>   1 </span><span class='rd'>class</span> <span class='t'>Window</span> <span class='rb'>&lt;</span> <span class='t'>Gosu</span><span class='rb'>::</span><span class='t'>Window</span>
+  <span class='ln'>   2 </span>
+  <span class='ln'>   3 </span>  <span class='pp'>include</span> <span class='t'>Poke</span>
+  <span class='ln'>   4 </span>
+  <span class='ln'>   5 </span>  <span class='st'>attr_accessor</span> <span class='co'>:paused</span>
+  <span class='ln'>   6 </span>  <span class='rb'>arr</span> <span class='rb'>=</span> <span class='ra'>[</span><span class='co'>1</span><span class='rb'>,</span> <span class='co'>2</span><span class='rb'>,</span> <span class='co'>3</span><span class='rb'>,</span> <span class='co'>4</span><span class='ra'>]</span>
+  <span class='ln'>   7 </span>
+  <span class='ln'>   8 </span>  <span class='c'># Comment!</span>
+  <span class='ln'>   9 </span>  <span class='rd'>def</span> <span class='id'>initialize</span>
+  <span class='ln'>  10 </span>    <span class='id'>@width</span> <span class='rb'>=</span> <span class='t'>WIDTH</span>
+  <span class='ln'>  11 </span>
+  <span class='ln'>  12 </span>    <span class='st'>super</span><span class='rm'>(</span><span class='id'>@width</span><span class='rm'>,</span> <span class='co'>false</span><span class='rm'>)</span>
+  <span class='ln'>  13 </span>
+  <span class='ln'>  14 </span>    <span class='co'>self</span><span class='rm'>.</span><span class='rm'>caption</span> <span class='rm'>=</span> <span class='sp'>&#39;</span><span class='co'>Poke</span><span class='sp'>&#39;</span>
+  <span class='ln'>  15 </span>
+  <span class='ln'>  16 </span><span class='cl'>    <span class='id'>@paused</span> <span class='rm'>=</span> <span class='co'>fal<span class='cu'>s</span>e</span>                                  </span>
+  <span class='ln'>  17 </span>
+  <span class='ln'>  18 </span>    <span class='id'>@pause_screen</span> <span class='rm'>=</span> <span class='t'>PauseScreen</span><span class='rm'>.</span><span class='rm'>new</span><span class='rm'>(</span><span class='co'>window</span><span class='rm'>:</span> <span class='co'>self</span><span class='rm'>,</span>
+  <span class='ln'>  19 </span>                                     <span class='co'>width</span><span class='rm'>:</span> <span class='id'>@width</span><span class='rm'>,</span>
+  <span class='ln'>  20 </span>                                    <span class='co'>height</span><span class='rm'>:</span> <span class='id'>@height</span><span class='rm'>)</span>
+  <span class='ln'>  21 </span>  <span class='rd'>end</span>
+  <span class='ln'>  22 </span>
+  <span class='ln'>  23 </span><span class='rd'>end</span>
