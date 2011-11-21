@@ -4,9 +4,9 @@ Skeemah::Application.routes.draw do
 
   get 'auth/github/callback', to: 'sessions#create'
 
-  get 'auth/github', as: :sign_in
+  get 'auth/github', as: :log_in
 
-  get 'signout', to: 'sessions#destroy', as: :sign_out
+  get 'logout', to: 'sessions#destroy', as: :log_out
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
