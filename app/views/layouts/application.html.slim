@@ -6,6 +6,8 @@ html
     = javascript_include_tag 'application'
     = csrf_meta_tags
   body
-    - if current_user
-      = render 'shared/topbar'
-    = yield
+    div#main
+      - if current_user
+        div#topbar
+          = render 'shared/topbar'
+      = yield
