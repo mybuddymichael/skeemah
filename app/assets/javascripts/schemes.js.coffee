@@ -1,3 +1,32 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+SECTIONS =
+  '#code': 'Background'
+  '.c':  'Comment'
+  '.cl': 'Cursor line'
+  '.co': 'Constant'
+  '.cu': 'Cursor'
+  '.id': 'Identifier'
+  '.ln': 'Line number'
+  '.pp': 'PreProc'
+  '.ra': 'rubyArrayDelimiter'
+  '.rb': 'rubyBlock'
+  '.rd': 'rubyDefine'
+  '.rm': 'rubyMethodBlock'
+  '.sp': 'Special'
+  '.st': 'Statement'
+  '.t':  'Type'
+
+jQuery ->
+
+  for klass, section of SECTIONS
+    do (klass, section) ->
+      $(klass).click (event) ->
+        event.stopPropagation()
+        $('#section_name').text(section)
+
+Raphael ->
+
+  cp = $('#colorpicker')
+  offset = cp.offset()
+
+  Raphael.colorwheel(offset.left, offset.top, 320, '#ccc', cp.get(0))
+
