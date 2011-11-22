@@ -22,6 +22,10 @@
 
   @include border-radius-uneven(0px, 0px, 2px, 2px);
 
+  a {
+    border-bottom-width: 1px;
+  }
+
   #user_info {
     float: right;
   }
