@@ -9,6 +9,5 @@ html
   body
     div#main
       - if current_user
-        div#topbar
-          = render 'shared/topbar'
+        = render 'shared/topbar'
       = yield
