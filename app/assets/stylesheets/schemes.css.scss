@@ -22,17 +22,18 @@
   $green:     #859900;
 
   #left {
-    width: $max_width/2;
+    width: $max_width*.34;
     float: left;
 
     #section_name {
       font-size: $h4;
       text-align: center;
+      margin-bottom: 16px;
     }
   }
 
   #code {
-    width: $max_width/2;
+    width: $max_width*.63-3px;
     font: $font_code;
     background: $base03;
     color: $base0;
