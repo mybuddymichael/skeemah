@@ -7,7 +7,12 @@ $blue_dark: #0072b6;
 
 $font_base: 16px Helvetica, Arial, sans-serif;
 
-$margin-top: 96px;
+$h0: 96px;
+$h1: 80px;
+$h2: 64px;
+$h3: 48px;
+
+$margin-top: $h0;
 
 // Mixins
 @mixin border-radius($radius: 2px) {
