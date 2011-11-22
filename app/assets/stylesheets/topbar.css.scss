@@ -5,6 +5,10 @@
   font-weight: bold;
   color: $white_base;
   background-color: $blue;
+
+  text-shadow: 1px 1px 0px darken($blue, 7%);
+  filter: dropshadow(color=#000, offx=1, offy=1);
+
   padding: 9px 10px 10px 10px;
 
   background: #268bd2; /* Old browsers */
