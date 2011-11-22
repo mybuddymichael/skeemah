@@ -1,0 +1,41 @@
+// Base colors
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+
+#code {
+  width: 512px;
+  font: 14px Menlo, Monaco, Consolas, "Lucida Console", monospace;
+  background: $base03;
+  color: $base0;
+  float: right;
+
+  span {
+    cursor: pointer;
+  }
+
+  .c  { color: $base01; font-style: italic; }
+  .cl { background-color: $base02; }
+  .co { color: $cyan; }
+  .cu { color: $base03; background-color: $base0; }
+  .id { color: $blue; }
+  .ln { color: $base01; background-color: $base02; }
+  .pp { color: $orange; }
+  .rd { color: $base1; font-weight: bold; }
+  .sp { color: $red; }
+  .st { color: $green; }
+  .t  { color: $yellow; }
+}
