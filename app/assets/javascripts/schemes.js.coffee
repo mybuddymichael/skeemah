@@ -23,10 +23,10 @@ jQuery ->
         event.stopPropagation()
         $('#section_name').text(section)
 
-Raphael ->
+  Raphael ->
 
-  cp = $('#colorpicker')
-  offset = cp.offset()
+    cp = $('#colorpicker')
+    offset = cp.offset()
 
-  Raphael.colorwheel(offset.left, offset.top, 320, '#ccc', cp.get(0))
+    Raphael.colorwheel(offset.left, offset.top, 320, '#ccc', cp.get(0))
 
