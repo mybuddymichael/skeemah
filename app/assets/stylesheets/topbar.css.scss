@@ -30,6 +30,12 @@
 
   a {
     border-bottom-width: 1px;
+
+    &:hover {
+      color: lighten($red, 7%);
+      text-shadow: 1px 1px 0px darken($red, 12%);
+      filter: dropshadow(color=#000, offx=1, offy=1);
+    }
   }
 
   #user_info {
