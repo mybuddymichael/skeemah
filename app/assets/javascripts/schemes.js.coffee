@@ -15,12 +15,15 @@ SECTIONS =
   '.st': 'Statement'
   '.t':  'Type'
 
+selectedClass = null
+
 jQuery ->
 
   for klass, section of SECTIONS
     do (klass, section) ->
       $(klass).click (event) ->
         event.stopPropagation()
+        selectedClass = klass
         $('#section_name').text(section)
 
   Raphael ->
@@ -28,5 +31,12 @@ jQuery ->
     cp = $('#colorpicker')
     offset = cp.offset()
 
-    Raphael.colorwheel(offset.left, offset.top, 320, '#ccc', cp.get(0))
+    cw = Raphael.colorwheel(offset.left, offset.top, 320, '#ccc', cp.get(0))
 
+    onchange = ->
+      (clr) ->
+        clr = Raphael.color(clr)
+        $(selectedClass).css('color', clr)
+        $('#section_name').css('color', clr)
+
+    cw.onchange = onchange()
