@@ -6,6 +6,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//
 //= require raphael
 //= require colorwheel
+//= require_tree .
