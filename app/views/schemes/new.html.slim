@@ -4,3 +4,8 @@ div#new_scheme
     div#section_name Click something!
     div#colorpicker
   = render 'shared/code'
+  div#save
+    = form_tag do
+      = label_tag(:name, 'Pick a name for this scheme:')
+      = text_field_tag(:name)
+      = submit_tag('Make it!')

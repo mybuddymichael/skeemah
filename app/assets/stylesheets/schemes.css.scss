@@ -61,4 +61,9 @@
     .st { color: $green; }
     .t  { color: $yellow; }
   }
+
+  #save {
+    clear: both;
+    padding-top: $h4;
+  }
 }
