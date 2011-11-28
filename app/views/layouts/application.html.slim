@@ -7,7 +7,7 @@ html
     = javascript_include_tag 'application'
     = csrf_meta_tags
   body
-    div#main
-      - if current_user
-        = render 'shared/topbar'
+    - if current_user
+      = render 'shared/topbar'
+    div#main(data-pjax-container)
       = yield
