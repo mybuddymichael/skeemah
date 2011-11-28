@@ -17,26 +17,41 @@ SECTIONS =
 
 selectedClass = null
 
-jQuery ->
-
-  for klass, section of SECTIONS
-    do (klass, section) ->
-      $(klass).click (event) ->
-        event.stopPropagation()
-        selectedClass = klass
-        $('#section_name').text(section)
-
+mainFunction = ->
   Raphael ->
-
     cp = $('#colorpicker')
     offset = cp.offset()
 
     cw = Raphael.colorwheel(offset.left, offset.top, 320, '#ccc', cp.get(0))
 
+    for klass, section of SECTIONS
+      do (klass, section) ->
+        $(klass).click (event) ->
+          event.stopPropagation()
+
+          selectedClass = klass
+          $('#section_name').text(section)
+
+          if klass == '#code' or klass == '.cl'
+            classColor = $(klass).css('background-color')
+          else
+            classColor = $(klass).css('color')
+
+          $('#section_name').css('color', classColor)
+          cw.color(classColor)
+
     onchange = ->
-      (clr) ->
-        clr = Raphael.color(clr)
-        $(selectedClass).css('color', clr)
-        $('#section_name').css('color', clr)
+      (color) ->
+        color = Raphael.color(color)
+        if selectedClass == '#code' or selectedClass == '.cl'
+          $(selectedClass).css('background-color', color)
+        else
+          $(selectedClass).css('color', color)
+        $('#section_name').css('color', color)
 
     cw.onchange = onchange()
+
+jQuery ->
+  mainFunction()
+  $('#main a').pjax('[data-pjax-container]')
+  $('body').bind 'pjax:end', mainFunction
