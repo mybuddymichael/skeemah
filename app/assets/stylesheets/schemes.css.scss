@@ -39,6 +39,12 @@
     color: $base0;
     float: right;
 
+    border: 1px solid darken($base03, 5%);
+    box-shadow: inset -1px -1px 0 0 lighten($base03, 7%),
+                inset 1px 1px 0 0 lighten($base03, 7%);
+
+    @include border-radius(3px);
+
     span {
       cursor: pointer;
     }
