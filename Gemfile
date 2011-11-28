@@ -37,6 +37,7 @@ end
 
 gem 'slim-rails'
 gem 'omniauth-github'
+gem 'rack-pjax'
 
 group :development do
   gem 'guard'
