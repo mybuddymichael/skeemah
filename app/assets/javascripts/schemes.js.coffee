@@ -26,7 +26,7 @@ mainFunction = ->
 
     for klass, section of SECTIONS
       do (klass, section) ->
-        $(klass).click (event) ->
+        $(klass).mousedown (event) ->
           event.stopPropagation()
 
           selectedClass = klass
