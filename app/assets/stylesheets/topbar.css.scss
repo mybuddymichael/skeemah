@@ -1,7 +1,7 @@
 @import 'config';
 
 #topbar {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
 
   color: $white_base;
@@ -10,7 +10,7 @@
   text-shadow: 1px 1px 0px darken($blue, 7%);
   filter: dropshadow(color=#000, offx=1, offy=1);
 
-  padding: 9px 10px 10px 10px;
+  padding: 9px 11px 10px 10px;
 
   background: #268bd2; /* Old browsers */
   background: -moz-linear-gradient(top, #268bd2 0%, #0082d3 100%); /* FF3.6+ */
@@ -43,9 +43,13 @@
 
   #user_info {
     float: right;
+    padding-top: 6px;
   }
 
-  #skeemah_link a {
-    border-bottom: none;
+  #skeemah_link {
+    font-size: 26px;
+    a {
+      border-bottom: none;
+    }
   }
 }
