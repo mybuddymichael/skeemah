@@ -1,4 +1,0 @@
-div#dashboard
-  h1 Hi, #{current_user.username}!
-  - if current_user.schemes.empty?
-    h2 You have no schemes. :(</br> Why not #{link_to 'make one', new_scheme_path}?
