@@ -1,0 +1,15 @@
+<div id='new_scheme'>
+  <h3>New scheme</h3>
+  <div id='left'>
+    <div id='section_name'>Click something!</div>
+    <div id='colorpicker'></div>
+  </div>
+  <%= render 'shared/code' %>
+  <div id='save'>
+    <%= form_tag do %>
+      <%= label_tag(:name, 'Pick a name for this scheme:') %>
+      <%= text_field_tag(:name) %>
+      <%= submit_tag('Make it!') %>
+    <% end %>
+  </div>
+</div>
