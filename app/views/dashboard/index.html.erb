@@ -1,6 +1,6 @@
 <% view = DashboardHelper::IndexView.new(current_user) %>
 <div id='dashboard'>
-  <h1>Hi, <%= view.username %></h1>
+  <h1>Hi, <%= view.username %>!</h1>
   <% if view.no_schemes %>
     <h2>You have no schemes. :(</br>
       Why not <%= link_to 'make one', new_scheme_path %>?
