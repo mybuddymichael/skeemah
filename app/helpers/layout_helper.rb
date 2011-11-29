@@ -1,7 +1,7 @@
 module LayoutHelper
   # MainLayoutView is the application's layout view, corresponding to
   # views/layouts/application.html.erb.
-  class MainLayoutView
+  class ApplicationView
 
     # Initialize the view and pass along the current_user, which is in
     # ApplicationController.
