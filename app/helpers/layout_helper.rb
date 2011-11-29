@@ -1,5 +1,5 @@
 module LayoutHelper
-  # MainLayoutView is the application's layout view, corresponding to
+  # ApplicationView is the application's layout view, corresponding to
   # views/layouts/application.html.erb.
   class ApplicationView
 
