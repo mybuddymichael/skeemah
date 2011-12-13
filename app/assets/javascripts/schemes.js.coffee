@@ -16,6 +16,7 @@ SECTIONS =
   '.t':  'Type'
 
 selectedClass = null
+selectedContext = 'fg'
 
 mainFunction = ->
   Raphael ->
@@ -33,6 +34,7 @@ mainFunction = ->
           $('#section_name').text(section)
 
           if klass == '#code' or klass == '.cl'
+            selectedContext = 'bg'
             classColor = $(klass).css('background-color')
           else
             classColor = $(klass).css('color')
@@ -43,7 +45,7 @@ mainFunction = ->
     onchange = ->
       (color) ->
         color = Raphael.color(color)
-        if selectedClass == '#code' or selectedClass == '.cl'
+        if selectedContext == 'bg'
           $(selectedClass).css('background-color', color)
         else
           $(selectedClass).css('color', color)
@@ -51,7 +53,22 @@ mainFunction = ->
 
     cw.onchange = onchange()
 
+  $('#fg_selector').mousedown (event) ->
+    setForeground()
+  $('#bg_selector').mousedown (event) ->
+    setBackground()
+
 jQuery ->
   mainFunction()
   $('#main a').pjax('[data-pjax-container]')
   $('body').bind 'pjax:end', mainFunction
+
+setForeground = ->
+  selectedContext = 'fg'
+  if selectedClass == '#code'
+    $('#section_name').text('Normal')
+
+setBackground = ->
+  selectedContext = 'bg'
+  if selectedClass == '#code'
+    $('#section_name').text('Background')

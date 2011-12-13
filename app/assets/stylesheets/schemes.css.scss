@@ -29,7 +29,19 @@
       font-size: $h4;
       font-weight: bold;
       text-align: center;
-      margin-bottom: 16px;
+    }
+
+    #fg_bg_selector {
+      text-align: center;
+
+      span {
+        border-bottom: 2px solid;
+        cursor: pointer;
+      }
+    }
+
+    #colorpicker {
+      margin-top: 16px;
     }
   }
 
