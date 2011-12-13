@@ -4,6 +4,7 @@ class SchemesController < ApplicationController
 
   def new
     @title = 'Make a new scheme - skeemah'
+    @scheme = Scheme.new
   end
 
 end
