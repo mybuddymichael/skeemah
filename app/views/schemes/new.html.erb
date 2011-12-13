@@ -8,10 +8,10 @@
   </div>
   <%= render 'shared/code' %>
   <div id='save'>
-    <%= form_tag do %>
-      <%= label_tag(:name, 'Pick a name for this scheme:') %>
-      <%= text_field_tag(:name) %>
-      <%= submit_tag('Make it!') %>
+    <%= form_for(@scheme) do |f| %>
+      <%= f.label(:name, 'Pick a name for this scheme:') %>
+      <%= f.text_field(:name) %>
+      <%= f.submit('Make it!') %>
     <% end %>
   </div>
 </div>
