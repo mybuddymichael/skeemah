@@ -8,7 +8,7 @@ Skeemah::Application.routes.draw do
 
   get 'logout', to: 'sessions#destroy', as: :log_out
 
-  get 'schemes/new', as: :new_scheme
+  resources :schemes
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
